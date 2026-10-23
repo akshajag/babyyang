@@ -1,0 +1,17 @@
+STUDENT CONTRIBUTION RECORD
+Complete this with facts. Do not submit placeholders as completed work.
+
+For each teammate:
+Name:
+Features personally implemented or substantially revised:
+Source files and commits:
+Technical decision and alternatives considered:
+Bug found and how it was diagnosed:
+Tests personally designed or validated:
+What the teammate can explain without assistance:
+
+AI DISCLOSURE STARTER
+Substantial AI assistance through Codex was used to generate and revise application code, interface styling, tests and documentation. An AI-generated illustration is included. Replace or expand this statement with the exact tools and uses that apply. Describe the students' own substantial technical work separately. The app's simulated teaching system is deterministic finite-rule code; it is not an external language model.
+
+EVIDENCE TO ADD
+Actual student commit history; tutoring observations with permission and no identifying information; before/after/next-day results with missing data preserved; device and assistive-tool checks actually performed; final demo video link.

@@ -1,0 +1,5 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';
+import{archiveSession,history,comparison}from'../dist/progress.js';
+const storage=()=>{const data=new Map();return{getItem:k=>data.get(k),setItem:(k,v)=>data.set(k,v)}};
+test('history updates a session without inventing additional visits',()=>{const db=storage(),s={seen:[[2,3]],checks:[]};archiveSession(s,{sessionId:'one',freshCorrect:1},db);archiveSession(s,{sessionId:'one',freshCorrect:2},db);assert.equal(history(db).length,1);assert.equal(history(db)[0].freshCorrect,2);});
+test('history keeps separate visits and records help alongside outcomes',()=>{const db=storage(),s={seen:[],checks:[]};for(let i=0;i<35;i++)archiveSession(s,{sessionId:String(i),freshCorrect:2,freshAnswered:3,instructionalHints:1,adultHelp:'reported'},db);assert.equal(history(db).length,30);assert.equal(comparison(history(db)).length,10);assert.equal(comparison(history(db))[0].help,'reported');assert.equal(comparison(history(db))[0].hints,1);});

@@ -1,0 +1,13 @@
+THREE-MINUTE DEMO OUTLINE
+Prepare and rehearse; this is not a recorded submission video.
+
+0:00 to 0:20: State participant names, app name and audience. One-sentence purpose: Fixiverse helps children who need extra learning support build understanding and confidence by testing examples, repairing rules and teaching Pip. Explain the real tutoring experience that motivated the work. Use only observations you actually made.
+0:20 to 1:00: Open Fraction Foundry. Build two matching wholes, show why Pip’s comparison fails, keep the clue and install a repair. Show a fresh check.
+1:00 to 1:35: Teach Pip a useful example. Reveal a fresh sealed prediction. Show how another example changes its possible rules. Explain that this is finite-rule software, not an external chatbot.
+1:35 to 2:05: Show the Rule Lab recipe, a trace and a counterexample. Repair the recipe and show its bounded 49-case or 252-case check. Do not call this proof of child mastery.
+2:05 to 2:30: Show the tutor plan, first-response recording, support separation and export. Keep all real learner information out of the public recording.
+2:30 to 2:50: Report actual pilot observations if collected, including missing follow-ups. If none exist, state that the pilot is next. Do not invent a percentage improvement.
+2:50 to 3:00: State tools/languages, accurately summarize AI assistance and name the student team’s own technical contributions. Point to source, tests and the live app.
+
+The 2026 official rules require a 1 to 3 minute video, purpose, audience, tools/languages and functionality; the video must be public on YouTube or Vimeo. Check the current rules and local submission instructions before recording.
+https://www.congressionalappchallenge.us/wp-content/uploads/2026/05/2026-CAC-Rules.pdf

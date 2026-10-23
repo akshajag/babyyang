@@ -1,0 +1,16 @@
+export const clampScroll=x=>Math.max(0,Math.min(1,Number.isFinite(x)?x:0));
+export const scrollRange=(p,a,b)=>clampScroll((p-a)/(b-a));
+export const scrollEase=x=>{const t=clampScroll(x);return t*t*(3-2*t);};
+export function scrollScene(value){const p=clampScroll(value);
+ if(p<.10)return{mode:'home',chapter:0,title:'Learning starts with an idea.',body:'Scroll to move closer. Fixiverse helps children who need extra support learn by finding mistakes, testing ideas and teaching Pip.',camera:scrollEase(p/.10),book:null};
+ if(p<.23)return{mode:'home',chapter:1,title:'Pull a possibility off the shelf.',body:'Your scroll brings Fraction Foundry out of the bookshelf. Keep scrolling to open its pages.',camera:1,book:'fraction',lift:scrollEase(scrollRange(p,.10,.23)),open:0};
+ if(p<.34)return{mode:'home',chapter:2,title:'Open the book. Enter the problem.',body:'A mixed-up machine needs a better rule. The learner becomes the person who can fix it.',camera:1,book:'fraction',lift:1,open:scrollEase(scrollRange(p,.23,.34))};
+ if(p<.49)return{mode:'fraction-build',chapter:3,title:'Build an example you can see.',body:'Inside the real Fraction Foundry workspace, learners build equal-part bars and compare pieces. Scroll on to see Pip’s mistake.',book:p<.40?'fraction':null,lift:1,open:1,fade:scrollEase(scrollRange(p,.34,.40)),pan:scrollRange(p,.40,.49)};
+ if(p<.59)return{mode:'fraction-compare',chapter:4,title:'A mistake becomes a useful clue.',body:'One third is bigger than one sixth. Pip’s rule picks the other piece. Visual evidence gives the learner a reason to challenge it.',pan:scrollRange(p,.49,.59)};
+ if(p<.67)return{mode:'fraction-repair',chapter:5,title:'Make the repair. Own the explanation.',body:'Replace the broken rule and inspect the result. The goal is understanding and the confidence to explain an idea: not just tapping the right answer.',pan:scrollRange(p,.59,.67)};
+ if(p<.73)return{mode:'home',chapter:6,title:'Another book. The same power to investigate.',body:'Now scroll into Pattern Grove. Follow a whole loop instead of copying its last tile.',camera:.6,book:'pattern',lift:scrollEase(scrollRange(p,.67,.70)),open:scrollEase(scrollRange(p,.70,.73))};
+ if(p<.82)return{mode:'pattern-compare',chapter:7,title:'Find the rhythm. Challenge the rule.',body:'This is the real Pattern Grove mission. Sun, leaf, sun, leaf needs a sun next. Pip’s old rule keeps the leaf.',book:p<.77?'pattern':null,lift:1,open:1,fade:scrollEase(scrollRange(p,.73,.77)),pan:scrollRange(p,.77,.82)};
+ if(p<.92)return{mode:'pattern-repair',chapter:8,title:'Turn a clue into a better way forward.',body:'The learner repairs the rule to follow the whole loop, then can test it on fresh patterns. Scroll on to see the bigger goal.',pan:scrollRange(p,.82,.92)};
+ return{mode:'home',chapter:9,title:'More understanding. More confidence. Less dependence.',body:'That is our impact goal. Tutors can track first responses, confidence, help needed and next-day retention. Real learner outcomes still need to be collected.',camera:0,book:p<.985?'pattern':null,lift:1-scrollEase(scrollRange(p,.92,.985)),open:1-scrollEase(scrollRange(p,.92,.95)),final:true};
+}
+if(typeof window!=='undefined')window.fixiverseScrollModel={clampScroll,scrollRange,scrollEase,scrollScene};

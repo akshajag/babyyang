@@ -1,0 +1,19 @@
+FIXIVERSE FINAL OFFLINE PILOT RELEASE | 22 OCTOBER 2026
+
+LATEST CHANGES
+Rule Lab and guided testing now share the bookshelf's illustrated paper, forest-green controls, rounded panels and clear typography. Each has a current-step instruction card. Rule Lab retains executable recipes, step traces, counterexamples and bounded checks of 49 fraction cases or 252 pattern cases. A failed check moves focus to its concrete example. Direct #lab-fraction and #lab-pattern links preserve navigation on reload.
+
+Guided testing uses numbered stages and tutor-specific instructions. Setup works before phase records exist. New tasks receive useful keyboard focus; reduced-motion preferences are respected. Independent responses, math help, access support, skipped confidence and missing responses remain distinct. The review table now distinguishes a finished phase with fewer tasks offered from an unrecorded phase. First-response collection does not show correctness feedback.
+
+VERIFICATION
+99 automated tests pass, including new setup-guidance and assessment-answer-isolation regressions. The clean GitHub repository also passed syntax/import checks across 45 JavaScript files and reproduced its standalone index.html exactly.
+
+Browser QA covered desktop (1440 x 950) and phone (390 x 844) views; fraction and pattern Rule Lab tests; a rejected prediction; saved clues; recipe traces; failing checks; and successful 49-case/252-case recipes. Guided QA covered setup, optional confidence, three first responses, math-help separation, play/observation handoff, return/resume, after tasks, skipped/not-offered answers, the real next-day lock, and export. The downloaded workbook preserved 2/3 independent before responses, skipped after confidence, missing follow-up values and partial observations. No real child participated in QA, and no learning benefit is inferred from those records.
+
+The final bundled app's Rule Lab links, failing-example focus, guided resume and console were checked. Inspected phone screens had no horizontal page overflow and no visible mission/form control below 44 pixels. Physical-phone and named screen-reader checks remain to be performed. Actual next-day completion was not simulated in the browser; elapsed-time and completion rules are covered by automated tests.
+
+WHAT IS FINISHED
+The requested offline software pilot, its core learning loops, tutor recording workflow, current visual polish, release packages and GitHub preparation are implemented. A public deployment, real-child pilot, measured learning/confidence outcomes, actual assistive-tool validation, student contribution evidence and the final student video are not completed by this software release.
+
+READ FIRST
+FINAL-REVIEW.html gives the latest candid rubric and supersedes older review snapshots in this archive. GITHUB-UPLOAD.txt explains exactly which separate download to upload to GitHub. Keep existing learning records private; QA used a separate localhost origin.
